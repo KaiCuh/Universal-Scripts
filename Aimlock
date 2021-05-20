@@ -25,7 +25,6 @@ getgenv().SeparateNotify = function(title, text, icon, time)
     SGui:SetCore("SendNotification",{
         Title = title;
         Text = text;
-        Icon = "rbxassetid://5793181157";
         Duration = time;
     })
 end
@@ -36,7 +35,6 @@ getgenv().Notify = function(title, text, icon, time)
         SGui:SetCore("SendNotification",{
             Title = title;
             Text = text;
-            Icon = "rbxassetid://5793181157";
             Duration = time;
         }) 
     end
