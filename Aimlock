@@ -156,6 +156,17 @@ CheckTeamsChildren()
     end
 end]]--
 
+Uis.InputBegan:Connect(function(Key)
+    if not (Uis:GetFocusedTextBox()) then 
+        if Key.UserInputType == Enum.UserInputType.MouseButton2 then 
+            pcall(function()
+                if MousePressed ~= true then MousePressed = true end 
+                local Target;Target = GetNearestTarget()
+                if Target ~= nil then 
+                    AimlockTarget = Target
+                end
+            end)
+        end
         if Key.KeyCode == Enum.KeyCode[AimlockToggleKey] then 
             Aimlock = not Aimlock
             Notify("Prison", "Aimlock: "..tostring(Aimlock), "", 3)
