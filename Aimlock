@@ -11,7 +11,7 @@ getgenv().PredictionVelocity = 10 -- The speed of the PredictMovement feature
 
 getgenv().StreetsUniversalAimbotLoadingTime = tick()
 if StreetsUniversalAimbotLoaded == true then
-    Notify("Ciazware", "Script Loaded Already", "", 3)
+    Notify("Prison-Aimbot", "Script Loaded Already", "", 3)
     return 
 end
 
@@ -156,18 +156,6 @@ CheckTeamsChildren()
     end
 end]]--
 
-Uis.InputBegan:Connect(function(Key)
-    if not (Uis:GetFocusedTextBox()) then 
-        if Key.UserInputType == Enum.UserInputType.MouseButton2 then 
-            pcall(function()
-                if MousePressed ~= true then MousePressed = true end 
-                local Target;Target = GetNearestTarget()
-                if Target ~= nil then 
-                    AimlockTarget = Target
-                    Notify("Prison", "Aimlock Target: "..tostring(AimlockTarget), "", 3)
-                end
-            end)
-        end
         if Key.KeyCode == Enum.KeyCode[AimlockToggleKey] then 
             Aimlock = not Aimlock
             Notify("Prison", "Aimlock: "..tostring(Aimlock), "", 3)
