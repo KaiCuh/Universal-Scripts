@@ -26,7 +26,7 @@ TextLabel.BackgroundTransparency = 1
 
 
 Mouse.KeyDown:Connect(function(key)
-    if key == "q" then
+    if key == "r" then
         if Mouse.Target.Parent:FindFirstChild("Humanoid") then
             TextLabel.Text = Mouse.Target.Parent.Name
         end
