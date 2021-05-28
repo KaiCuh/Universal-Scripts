@@ -26,7 +26,7 @@ TextLabel.BackgroundTransparency = 1
 
 
 Mouse.KeyDown:Connect(function(key)
-    if key == "r" then
+    if key == "q" then
         if Mouse.Target.Parent:FindFirstChild("Humanoid") then
             TextLabel.Text = Mouse.Target.Parent.Name
         end
@@ -37,7 +37,7 @@ Mouse.KeyDown:Connect(function(key)
 end)
 
 Mouse.KeyDown:Connect(function(key)
-    if key == "x" then
+    if key == "e" then
         holdx = true
         while holdx do
             game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Fire:FireServer(game.Players:FindFirstChild(TextLabel.Text).Character.Torso.CFrame+game.Players:FindFirstChild(TextLabel.Text).Character.Torso.Velocity/8)
